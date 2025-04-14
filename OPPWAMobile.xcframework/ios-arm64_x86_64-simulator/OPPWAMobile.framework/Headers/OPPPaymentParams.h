@@ -95,7 +95,6 @@ Method to add parameter that will be sent to the server.
  */
 - (void)mask;
 
-/// :nodoc:
 - (nonnull NSDictionary *)dictionaryForExecutingTransaction;
 @end
 NS_ASSUME_NONNULL_END

@@ -18,7 +18,6 @@
 @class OPPBinInfo;
 @class Warning;
 @class OPPCheckoutData;
-@class OPPBrandInfo;
 
 /// An enumeration for the various provider modes.
 typedef NS_ENUM(NSInteger, OPPProviderMode) {
@@ -211,17 +210,5 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)requestCheckoutDataWithCheckoutID:(nonnull NSString *)checkoutID
                         completionHandler:(void (^)(OPPCheckoutData * _Nullable checkoutData, NSError * _Nullable error))completionHandler;
-
-/// :nodoc:
-- (void)requestValidationsForPaymentBrands:(nonnull NSArray<NSString*> *)paymentBrands
-                                checkoutID:(nonnull NSString *)checkoutID
-                         completionHandler:(void (^)(NSArray<OPPBrandInfo *> * _Nullable brandRules,
-                                                     NSError * _Nullable error))completionHandler;
-
-/// :nodoc:
-- (void)sendThreeDS2AuthParams:(nonnull NSString *)authParams
-                   transaction:(nonnull OPPTransaction *)transaction
-             completionHandler:(void (^)(OPPTransaction * _Nonnull transaction,
-                                         NSError * _Nullable error))completionHandler;
 @end
 NS_ASSUME_NONNULL_END
